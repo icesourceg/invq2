@@ -16,10 +16,12 @@ def readcsv(csvpath):
         readings.append(reading)
     return readings
 
-def writecsv(csvpath, dictdata):
-  print(dictdata[0])
-  headers = list(dictdata[0].keys())
-  print(headers)
+def writecsv(csvpath, dictdata, header = None):
+  if header is None:
+    headers = list(dictdata[0].keys())
+  else:
+    headers = header
+  
   with open(csvpath, 'w') as csvfile:
     dict_writer = csv.DictWriter(csvfile, headers)
     dict_writer.writeheader()

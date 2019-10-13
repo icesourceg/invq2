@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <% include ./include/headgold %>
+    </head>
+    <body>
+        <% include ./include/goldbg %>
+        <script src="/js/returnscan.js"></script>
+        <div class="container">
+            <div class="logo">&nbsp;</div>
+            <div class="row">
+              <% include ./include/header %>
+            </div>
+            
+            <div class="content">
+              <div class="content-background"></div>
+              <div class="content-type">Type <br />
+                <span class="content-desk-type">
+                    <%= data.guest.guesttype %>
+              </span>
+              </div>
+              <div class="content-desk">Meja<br /> <span class="content-desk-type">
+                  <%= data.guest.desknumber %>  
+              </span></div>
+              
+              <div class="content-section">
+                <div class="content-header">SELAMAT DATANG</div>
+                <div class="content-body">
+                  <div class="signedin">
+                      <% if (data.data.id === 'signedin') { %>
+                        User Already Signed In 
+                      <% } %>
+                      </div>
+                <table class="row-space">
+                  <tr>
+                    <td class="col1">Nama</td>
+                    <td class="col2"><%= data.guest.name %></td>
+                  </tr>
+                  <tr class="row-space">
+                      <td class="col1">Nama Toko</td>
+                      <td class="col2"><%= data.guest.shop_name %></td>
+                  </tr>
+                  <tr>
+                      <td class="col1">Jumlah Undangan</td>
+                      <td class="col2">
+                      <% if (data.status === 200) { %>
+                        <%= data.guest.num_invited %> Orang 
+                      <% } else { %>
+                        <%= data.guest.num_invited %>
+                      <% } %>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="col1">Daerah Asal</td>
+                      <td class="col2"><%= data.guest.city %></td>
+                  </tr>
+                  <tr>
+                      <td class="col1">No Registrasi</td>
+                      <td class="col2"><%= data.guest.regnumber %></td>
+                  </tr>
+                </table>
+                <div class="content-footer">
+                  Pastikan Nama, Nama Toko dan Daerah Asal sudah benar<br \>
+                  Nomor Registrasi akan diundi untuk doorprize <br />
+                  <a href="/scan">scan another</a> &nbsp; | &nbsp;
+                  <a href="/guestlistall">guest list</a>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        <% include ./include/scripts %>
+        <% include ./include/footer %>
+    </body>
+</html>

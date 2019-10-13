@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./include/headgold %>
+  </head>
+    <body>
+        <% include ./include/goldbg %>
+      <script src="/js/animatenumber.js"></script>
+      <script src="/js/grandprize.js"></script>
+        <div class="container">
+            <div class="logo">&nbsp;</div>
+            <div class="row">
+              <% include ./include/header %>
+            </div>
+            
+            <div class="prize-content">
+                <div class="grandprize-content-title"><%= data.title %></div>
+                <br />
+                <div id="regnum-0" data-value="<%= data.rows.data[0].regnumber %>" class="grandprize-content-header">0000</div>
+                <div class="grandprize-content-body">
+                  <div class="grandprize-column">
+                    <div id="shopname-0" data-value="<%= data.rows.data[0].shop_name %>" class="grandprize-cell">-</div>
+                  </div> 
+                  <div class="grandprize-column">
+                      <div id="name-0" data-value="<%= data.rows.data[0].name %>" class="grandprize-cell">-</div>
+                  </div> 
+                  <div class="grandprize-column">
+                      <div id="city-0" data-value="<%= data.rows.data[0].city %>" class="grandprize-cell">-</div>
+                  </div> 
+                </div>
+            </div>
+          </div>
+        <% include ./include/scripts %>
+        <% include ./include/footer %>
+    </body>
+</html>

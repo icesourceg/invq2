@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <% include ./include/headgold %>
+  </head>
+    <body>
+        <% include ./include/goldbg %>
+        <script src="/js/animatenumber.js"></script>
+        <script src="/js/doorprize.js"></script>
+        <div class="container">
+            <div class="logo">&nbsp;</div>
+            <div class="row">
+              <% include ./include/header %>
+            </div>
+            
+            <div class="prize-content">
+                <div class="doorprize-content-header"><%= data.title %></div>
+                <div class="prize-content-body2">
+                    <% let i = 0 %>
+                  <% data.rows.data.forEach(function(d){ %>
+                    <div class="doorprize-column">
+                        <div class="doorprize-cell">
+                            <div id="regnum-<%= i %>" data-regnumber="<%= d.regnumber %>" class="doorprize-cell-details-big doorprize-cell-details">
+                              0000
+                            </div>
+                            </div>
+                        <div class="doorprize-cell">
+                            <div id="details-<%= i %>" data-shopname="<%= d.shop_name %>" 
+                                data-name="<%= d.name %>" 
+                                data-city="<%= d.city %>" 
+                                class="doorprize-cell-details-small">
+                                <strong>-</strong>
+                          </div>
+                        </div> 
+                      </div>
+                  <%
+                    i++
+                    }) 
+                  %>
+                  
+                </div>
+            </div>
+          </div>
+        <% include ./include/scripts %>
+        <% include ./include/footer %>
+    </body>
+</html>

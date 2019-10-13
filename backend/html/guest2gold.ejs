@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <% include ./include/headgoldoverflow %>
+    
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/buttons.bootstrap4.min.css">
+    <script src="/vendor/jquery/js/jquery.dataTables.min.js"></script>
+    <script src="/vendor/bootstrap/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/vendor/datatables/js/dataTables.buttons.min.js"></script>
+    <script src="/vendor/bootstrap/js/buttons.bootstrap4.min.js"></script>
+    <script src="/vendor/jszip/js/jszip.min.js"></script>
+    <script src="/vendor/pdfmake/js/vfs_fonts.js"></script>
+    <script src="/vendor/datatables/js/buttons.html5.min.js"></script>
+    <script src="/vendor/datatables/js/buttons.print.min.js"></script>
+    <script src="/vendor/datatables/js/datetime-moment.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  
+    </head>
+    <body>
+        <% include ./include/goldbg %>
+        <div class="container">
+            <div class="logo">&nbsp;</div>
+            <div class="row">                
+            <% include ./include/header %>
+            </div>
+            <div class="guest-container">
+                <div class="guest-content-header">Daftar Tamu</div>
+                <div class="guest-content-signin">Tamu: 
+                  <span class="guest-text-big" id="livesignedin">0</span><span class="guest-text-small" id="liveguest"> / 0</span></div>
+                <div class="guest-content-body">
+                  <table id='tblguestlist' class="table table-striped table-bordered" style="width:99%">
+                  <thead>
+                  <tr>
+                    <th>Nama</th>
+                    <th>Nama Toko</th>
+                    <th>Cabang</th>
+                    <th>Jumlah Orang</th>
+                    <th>Type</th>
+                    <th>Meja</th>
+                    <th>Nomor Registrasi</th>
+                    <th>SignIn</th>
+                    <th>SignedIn</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+        </div>
+
+        <% include ./include/scripts %>
+        <% include ./include/footer %>
+        <script src="/js/guest2.js"></script>
+    </body>
+</html>

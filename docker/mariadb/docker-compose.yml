@@ -1,0 +1,16 @@
+version: '3'
+services: 
+  mariadbnd:
+    image: yobasystems/alpine-mariadb
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=invqdb
+      - MYSQL_USER=invqdbuser
+      - MYSQL_PASSWORD=invqdb-#201908!
+      - MYSQL_ROOT_PASSWORD=r00t-#201908!
+    volumes:
+      - ./data/storage:/var/lib/mysql
+      - ./data/share:/share
+      - ./data/my.cnf.d:/etc/my.cnf.d

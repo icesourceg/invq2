@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <% include ./include/headgold %>
+  </head>
+    <body>
+        <% include ./include/goldbg %>
+        <script src="/js/scan.js"></script>
+        <div class="container">
+            <div class="logo">&nbsp;</div>
+            <div class="row">
+              <% include ./include/header %>
+            </div>
+            
+            <div class="content">
+                <div class="scan-content-header">SCAN QR CODE ANDA UNTUK REGISTRASI<br />DAN DOORPRIZE</div>
+                <div class="scan-content-body">
+                  <img src="/images/qrcode.png" height="210" width="210" />
+                  <br />
+                  <form autocomplete="off" name="scanform" id="scanform" method="post" action="/signedin">
+                  <input autocomplete="new-password" 
+                  class="scan" 
+                  type="text" 
+                  name="qrdata"
+                  id="qrdata" 
+                  value="SCAN CODE" 
+                  onblur="if(value=='') value = 'SCAN CODE'" 
+                  onfocus="if(value=='SCAN CODE') value = ''" 
+                  />
+                </form>
+                </div>
+            </div>
+          </div>
+        <% include ./include/scripts %>
+        <% include ./include/footer %>
+    </body>
+</html>
