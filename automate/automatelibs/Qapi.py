@@ -12,3 +12,11 @@ def findInDict(complete_dict, dict_key, dict_value_to_find):
     if x.get(dict_key) == dict_value_to_find:
       return x
   return None
+
+def sendGuest(url, data, token):
+  headers = {'x-access-token': token, 
+             'Content-Type': 'application/json'
+            }
+  r = requests.post(url, data, headers=headers)
+  print(r.status_code)
+  print(r.text)

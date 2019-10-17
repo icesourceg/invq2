@@ -5,9 +5,7 @@ const stoploop = (indexnumber) => {
   let selecteddetails = '#details-' + indexnumber;
   $(selectedregnum).data('animated', false);
   $(selectedregnum).text($(selectedregnum).data('regnumber'));
-  let details = "<strong>" + $(selecteddetails).data('shopname') + "</strong><br />-" +
-                "<br />" + $(selecteddetails).data('name') + "</strong><br />-" +
-                "<br />" + $(selecteddetails).data('city');
+  let details = "<strong>" + $(selecteddetails).data('name') + "</strong>";
   $(selecteddetails).html(details);  
 }
 
@@ -51,7 +49,7 @@ $(document).ready(function() {
   let selecteddetails = '';
 
   $('body').keyup(function(e){
-    if(e.keyCode == 32){
+    if(e.keyCode == 32){ // space - show random
       if (loopindex % 2 === 0){
         selectedregnum = '#regnum-'+prizeindex;
         console.log(selectedregnum);
@@ -64,7 +62,7 @@ $(document).ready(function() {
         prizeindex++;
       }
       loopindex++;
-    } else if(e.keyCode == 82){
+    } else if(e.keyCode == 82){ // R - reset
       loopindex = loopindex - 2;
       prizeindex = prizeindex -1;
       revertrandom(prizeindex);

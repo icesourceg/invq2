@@ -42,8 +42,11 @@
 body, html {
 	height: 100%;
   font-family: sans-serif;
-  background-color: #856225; 
-  background: radial-gradient(#d6b268, #856225);
+  background-color: #d6caca; 
+  background: radial-gradient(#d6caca, #d6caca);
+  overflow: hidden;
+  min-width: 1024px;
+  min-height: 768px;
 }
 
 /* ------------------------------------ */

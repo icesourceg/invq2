@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sequelize model:generate --name Guesthistory --attributes checkin:date --underscored
+npx sequelize model:generate --name Guesthistory --attributes checkin:date --underscored

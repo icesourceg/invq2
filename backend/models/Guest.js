@@ -2,11 +2,11 @@
 module.exports = (sequelize, DataTypes) => {
   const Guest = sequelize.define('Guest', {
     name: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.STRING
     },
-    shop_name: {
-      allowNull: false,
+    address: {
+      allowNull: true,
       type: DataTypes.STRING
     },
     num_invited: {
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER
     },
     city: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.STRING
     },
     code: {
@@ -22,11 +22,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
     },
     guesttype: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.STRING
     },
     desknumber: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.STRING
     },
     regnumber: {
@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       {
         unique: false,
-        fields:['shop_name']
+        fields:['address']
       }
       
      ],

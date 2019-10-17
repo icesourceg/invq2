@@ -13,26 +13,25 @@ router.use(bodyParser.json());
 
 router.post('/signedin', (req, res) => {
   let io = req.app.get('socketio');
-  req_code = req.body.qrdata
-  const rest_url = config.api.guest_signin.url + "/" + req_code 
+  let req_code = req.body.qrdata;
+  const rest_url = config.api.guest_signin.url + "/" + req_code;
+  console.log(rest_url);
   request.get({
     method: 'GET',
     uri: rest_url,
     headers: {'x-access-token': config.api.token}
   }, (err, resp, body) => {
+    console.log(body)
     let jsondata = JSON.parse(body)
-    console.log(jsondata)
-    
-    
+    console.log(jsondata);
     console.log('sendsocket');
     if(!err && resp.statusCode == 200){
       let num_reg = jsondata.data.id
       jsondata.data.id = numpad(num_reg,4)
-      console.log(jsondata)
       io.emit('hi!', 'refreshsignedin');
-      return res.render('signingold', {data:jsondata,moment: moment});
+      return res.render('signin', {data:jsondata,moment: moment});
     } else {
-      return res.render('signingold', {data:jsondata, moment: moment});
+      return res.render('signin', {data:jsondata, moment: moment});
     }      
   });
 
@@ -42,7 +41,7 @@ router.post('/signedin', (req, res) => {
 
 router.get('/scan', (req, res) => {
   //return res.status(200).send({"status": 200, "data": rows})
-  return res.render('scangold', {data: []});
+  return res.render('scan', {data: []});
 });
 
 
@@ -57,10 +56,10 @@ router.get('/doorprize1', (req, res) => {
     let jsondata = JSON.parse(body)
     console.log(jsondata)
     let content = {
-      'title': "DOORPRIZE 5gr EMAS",
+      'title': "DOORPRIZE 2gr EMAS",
       'rows': jsondata,
     };
-    return res.render('doorprizegold', {data: content, numpad :numpad});
+    return res.render('doorprize1', {data: content, numpad :numpad});
   });
 });
 
@@ -74,13 +73,46 @@ router.get('/doorprize2', (req, res) => {
     let jsondata = JSON.parse(body)
     console.log(jsondata)
     let content = {
-      'title': "DOORPRIZE 10gr EMAS",
+      'title': "DOORPRIZE Voucher Hotel",
       'rows': jsondata,
     };
-  return res.render('doorprize2gold', {data: content, numpad :numpad});
+  return res.render('doorprize1', {data: content, numpad :numpad});
   });
 });
 
+router.get('/doorprize3', (req, res) => {
+  const rest_url = config.api.doorprize3.url
+  request.get({
+    method: 'GET',
+    uri: rest_url,
+    headers: {'x-access-token': config.api.token}
+  }, (err, resp, body) => {
+    let jsondata = JSON.parse(body)
+    console.log(jsondata)
+    let content = {
+      'title': "DOORPRIZE Voucher 500,000",
+      'rows': jsondata,
+    };
+  return res.render('doorprize2', {data: content, numpad :numpad});
+  });
+});
+
+router.get('/doorprize4', (req, res) => {
+  const rest_url = config.api.doorprize4.url
+  request.get({
+    method: 'GET',
+    uri: rest_url,
+    headers: {'x-access-token': config.api.token}
+  }, (err, resp, body) => {
+    let jsondata = JSON.parse(body)
+    console.log(jsondata)
+    let content = {
+      'title': "DOORPRIZE Voucher 1,000,000",
+      'rows': jsondata,
+    };
+  return res.render('doorprize2', {data: content, numpad :numpad});
+  });
+});
 
 router.get('/grandprize', (req, res) => {
   const rest_url = config.api.grandprize.url
@@ -113,33 +145,18 @@ router.get('/guestlist', (req, res) => {
   }, (err, resp, body) => {
     let jsondata = JSON.parse(body)
     if(!err && resp.statusCode == 200){
-      return res.render('guest2gold', {data:jsondata.data, 
+      return res.render('guestlist', {data:jsondata.data, 
                                   moment: moment, numpad :numpad});
     } else {
-      return res.render('guest2gold');
+      return res.render('guestlist');
     }      
   });
 });
 
 
 router.get('/guestlistall', (req, res) => {
-  return res.render('guest2gold');
+  return res.render('guestlist');
 });
 
-// router.get('/downloadcsv', (req, res) => {
-//   request.get({
-//     method: 'GET',
-//     uri: config.api.guest_history.url,
-//     headers: {'x-access-token': config.api.guest_history.token}
-//   }, (err, resp, body) => {
-//     let jsondata = JSON.parse(body)
-//     if(!err && resp.statusCode == 200){
-//       return res.render('guest', {data:jsondata.data, 
-//                                   moment: moment});
-//     } else {
-//       return res.render('guesterr');
-//     }      
-//   });
-// });
 
 module.exports = router;

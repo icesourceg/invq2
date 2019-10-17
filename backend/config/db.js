@@ -3,8 +3,8 @@ const fs = require('fs');
 module.exports = 
 {
   "development": {
-    "username": "root",
-    "password": "r00t123",
+    "username": "invqdbuser",
+    "password": "invqdb-#201908!",
     "database": "invqdb",
     "host": "127.0.0.1",
     "port": 3306,
@@ -22,7 +22,7 @@ module.exports =
     "username": "invqdbuser",
     "password": "invqdb-#201908!",
     "database": "invqdb",
-    "host": "165.22.245.109",
+    "host": "aya.cayalabs.com",
     "port": 3306,
     "dialect": "mysql",
     "logging": false

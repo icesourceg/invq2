@@ -114,7 +114,7 @@ router.post('/add', VerifyToken, (req, res) => {
 
   models.Guest.create({
     name: req.body.name,
-    shop_name: req.body.shop_name,
+    address: req.body.address,
     num_invited: req.body.num_invited,
     city: req.body.city,
     code: gen_code,
@@ -143,7 +143,7 @@ router.post('/addbulk', VerifyToken, (req, res) => {
     }
     const each_data = {
       "name": eachguest.name,
-      "shop_name": eachguest.shop_name,
+      "address": eachguest.address,
       "num_invited": eachguest.num_invited,
       "city": eachguest.city,
       "code": gen_code,
@@ -151,6 +151,7 @@ router.post('/addbulk', VerifyToken, (req, res) => {
       "desknumber": eachguest.desknumber,
       "regnumber": eachguest.regnumber
     }
+    console.log(each_data);
     complete_data.push(each_data);
   });
 
@@ -194,7 +195,7 @@ router.get('/signin/:code', VerifyToken, (req, res) => {
     const guest = {
       "id": "No Such User",
       "name": "No Such User",
-      "shop_name": "No Such User",
+      "address": "No Such User",
       "city": "No Such User",
       "num_invited": "No Such User",
       "num_reg": "No Such User"
@@ -220,7 +221,8 @@ router.get('/directsignin/:code', (req, res) => {
       throw new Error('no such user');
     }
     let gh = models.Guesthistory.build({
-      checkin: sequelize.literal('CURRENT_TIMESTAMP')
+      checkin: sequelize.literal('CURRENT_TIMESTAMP'),
+      hasprize: -2
     })
     gh.setGuest(result,  {save: false})
     gh.save().then( result2 => {
@@ -240,7 +242,7 @@ router.get('/directsignin/:code', (req, res) => {
     const guest = {
       "id": "No Such User",
       "name": "No Such User",
-      "shop_name": "No Such User",
+      "address": "No Such User",
       "city": "No Such User",
       "num_invited": "No Such User",
       "num_reg": "No Such User"

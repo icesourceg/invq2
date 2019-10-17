@@ -12,8 +12,8 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      shop_name: {
-        allowNull: false,
+      address: {
+        allowNull: true,
         type: Sequelize.STRING
       },
       num_invited: {
@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       city: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       code: {
@@ -33,7 +33,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       desknumber: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING
       },
       regnumber: {

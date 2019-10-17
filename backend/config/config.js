@@ -10,14 +10,17 @@ module.exports.api = {
   'guest_signin':  {
     'url': 'http://127.0.0.1:5000/api/guest/signin',
   },
-  'doorprize1':  {
-    'url': 'http://127.0.0.1:5000/api/guest/random/5/1',
+  'doorprize1':  { // doorprize emas 2gr
+    'url': 'http://127.0.0.1:5000/api/guest/random/3/0',
   },
-  'doorprize2':  {
-    'url': 'http://127.0.0.1:5000/api/guest/random/4/2',
+  'doorprize2':  { // doorprize voucher hotel 1 night
+    'url': 'http://127.0.0.1:5000/api/guest/random/3/0',
   },
-  'grandprize':  {
-    'url': 'http://127.0.0.1:5000/api/guest/random/1/3',
+  'doorprize3':  { // doorprize voucher 500k
+    'url': 'http://127.0.0.1:5000/api/guest/random/1/0',
+  },
+  'doorprize4':  { // doorprize voucher 1m
+    'url': 'http://127.0.0.1:5000/api/guest/random/1/0',
   }
 };
 
