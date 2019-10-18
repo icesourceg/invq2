@@ -160,7 +160,7 @@ router.post('/addbulk', VerifyToken, (req, res) => {
     return res.status(200).send({"status": 200, "data": result, "msg": "OK"});
   }).catch(err => {
     console.log(err);
-    return res.status(500).send({"status": 500, "data": [], "msg": "Error Sending Data.."});
+    return res.status(500).send({"status": 500, "data": [], "msg": err});
   });
   
 });

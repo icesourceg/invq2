@@ -14,9 +14,9 @@ import Qdir
 import Qjson
 import Qapi
 
-json_file_path = "../compiledoutput/combined.json"
+json_file_path = "../compiledoutput/combinedlisted.json"
 json_data = Qjson.readjson(json_file_path)
-url = 'http://localhost:5000/api/guest/addbulk'
+url = 'http://aya.cayalabs.com:5000/api/guest/addbulk'
 token = 'Y2E2YTJjYmUwNTA5ZTYxNjAxNmI0MWU5'
 
 for each_json in json_data:
