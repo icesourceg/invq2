@@ -43,11 +43,18 @@ $(document).ready(function() {
     ajax: ajax_url,
     "columns": [
       { "data": "name" },
-      { "data": "shop_name" },
+      { "data": "address" },
       { "data": "city" },
       { "data": "num_invited" },
       { "data": "guesttype" },
-      { "data": "desknumber" },
+      { "data": "desknumber", "defaultContent": "-" , "mRender": ( data, type, full ) => {
+        if (!data){
+          return '-';
+        } else {
+          return '-';
+        } 
+      }
+    },
       { "data": "regnumber", "defaultContent": "-" , "mRender": ( data, type, full ) => {
         if (!data){
           return '-';

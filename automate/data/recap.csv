@@ -258,7 +258,7 @@ no,nama,alamat,kota,JML,Status
 257,BAPAK ERIC FERDINANDO,KARYAWAN GUDANG PT BINA CERIA BERSAMA,SURABAYA,2,Regular
 258,BAPAK TRIYONO,KARYAWAN GUDANG PT BINA CERIA BERSAMA,SURABAYA,2,Regular
 259,IBU JOVITA,,SURABAYA,2,VIP-Wine
-260,IBU LUSI,,SURABAYA,2,VIP
+260,IBU LUSI,PT BINA CERIA BERSAMA,SURABAYA,2,VIP
 261,BAPAK/IBU YUWONO,,SURABAYA,2,Regular
 262,BAPAK/IBU DAVID,PAKUWON,SURABAYA,2,VIP-Wine
 263,BAPAK/IBU ROBY,PAKUWON,SURABAYA,2,VIP-Wine
@@ -743,6 +743,7 @@ no,nama,alamat,kota,JML,Status
 3025,Bapak Wira,Intiland,,2,Regular
 3048,Ibu Grace Notaris,,,2,Regular
 3058,Bapak Alfred - Pengacara,Surabaya,,2,Regular
+3014,Rina,Surabaya,,2,VIP Wine
 3005,Ibu Agustina Amalia - Notaris,Surabaya,,2,Regular
 4001,Bapak Agung dan Emma Sekeluarga,,Gresik,5,Keluarga
 4002,Ibu Lilik ,,Tulung Agung,2,Keluarga
@@ -761,7 +762,6 @@ no,nama,alamat,kota,JML,Status
 4016,Bapak AIPTU Hendro Irgiyanto,Surabaya,,2,Regular
 4017,Riri,Surabaya,,2,Regular
 4018,Ibu Kenik,Surabaya,,2,Regular
-4019,Ibu dan Bapak Netty ,Gorontalo,,2,Regular
 3104,Jhony Iroth,,,2,Regular
 3010,Pak Pu dan Budhe Talkah,,Ponorogo,2,Keluarga
 3007,Apri dan Pak Ros,,Ponorogo,2,Keluarga
@@ -796,7 +796,6 @@ no,nama,alamat,kota,JML,Status
 3015,Bapak Suradi,,Malang Ibu Nanik,2,Keluarga
 3018,Retno Ambar Wati,,Malang Ibu Nanik,2,Keluarga
 3036,Luluk Maslifah,,Malang Ibu Nanik,2,Keluarga
-3043,"Bapak Achmad Nueski Meiringga, SH M.Kn",Double dengan 271,,2,Regular
 5020,Ibu Dina,,,2,VIP
 5011,Ibu Titik,Dosen ILKOM UNAIR,,2,VIP
 5003,Bapak Soeparno,,,2,VIP
@@ -825,12 +824,11 @@ no,nama,alamat,kota,JML,Status
 5046,Abitha,,,2,Regular
 5042,Madha,,,2,Regular
 5033,Irsya,,,2,Regular
-5001,Feri Susan,,,2,Regular
+9086,Feri Susan,,,2,Regular
 5029,Bapak James Iroth,,,2,Regular
 5060,Lena Kilapong,,,2,Regular
 4019,Bapak Syarif Mbuinga,,,2,Regular
 5051,Tina Kilapong,,,2,Regular
-3025,Bapak Wira - Intiland,,,2,Regular
 5058,Bapak Eko - Intiland,,,2,Regular
 7001,Nesya,Surabaya,,2,Regular
 7002,Rahajeng,Surabaya,,2,Regular
@@ -851,7 +849,7 @@ no,nama,alamat,kota,JML,Status
 5040,Bapak Sabar,Ponorogo,,2,Keluarga
 5044,Bapak Ramendan,Ponorogo,,2,Keluarga
 5053,Bapak Dariyono,Ponorogo,,2,Keluarga
-,Ibu Darmi,Ponorogo,,2,Keluarga
+5099,Ibu Darmi,Ponorogo,,2,Keluarga
 5035,Ibu Sarti,Ponorogo,,2,Keluarga
 5026,Bapak Bibit,Ponorogo,,2,Keluarga
 5017,Bapak Samiran,Ponorogo,,2,Keluarga
@@ -1279,7 +1277,13 @@ no,nama,alamat,kota,JML,Status
 9089,Mandiri Prioritas Darmo,Surabaya,,2,Regular
 9099,Bapak Ibu Sundoko,Surabaya,,2,Regular
 9080,Ibu Siti Penjahit,Surabaya,,2,Regular
-9035,Nesya,Surabaya,,2,Reguler
-9062,Rahajeng,Surabaya,,2,Reguler
-9071,Dhiva,Surabaya,,2,Reguler
-9044,Febby Ovelia,Surabaya,,2,Reguler
+9035,Nesya,Surabaya,,2,regular
+9062,Rahajeng,Surabaya,,2,regular
+9071,Dhiva,Surabaya,,2,regular
+9044,Febby Ovelia,Surabaya,,2,regular
+9082,Ibu Ita Probowati,PT BINA CERIA BERSAMA,,2,VIP
+9073,Ibu Nanik,Surabaya,,2,VIP
+9051,Bapak Yanu,PT ADI SURYA SEMPURNA,,2,VIP
+9045,Arifian Putra,,,1,Regular
+9054,Afenia Putri,,,1,Regular
+3011,Hendra Widjojo,,,2,VIP

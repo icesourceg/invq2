@@ -11,10 +11,10 @@ module.exports.api = {
     'url': 'http://127.0.0.1:5000/api/guest/signin',
   },
   'doorprize1':  { // doorprize emas 2gr
-    'url': 'http://127.0.0.1:5000/api/guest/random/3/0',
+    'url': 'http://127.0.0.1:5000/api/guest/random/1/0',
   },
   'doorprize2':  { // doorprize voucher hotel 1 night
-    'url': 'http://127.0.0.1:5000/api/guest/random/3/0',
+    'url': 'http://127.0.0.1:5000/api/guest/random/1/0',
   },
   'doorprize3':  { // doorprize voucher 500k
     'url': 'http://127.0.0.1:5000/api/guest/random/1/0',

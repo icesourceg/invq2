@@ -59,7 +59,7 @@ router.get('/doorprize1', (req, res) => {
       'title': "DOORPRIZE 2gr EMAS",
       'rows': jsondata,
     };
-    return res.render('doorprize1', {data: content, numpad :numpad});
+    return res.render('doorprize2', {data: content, numpad :numpad});
   });
 });
 
@@ -76,7 +76,7 @@ router.get('/doorprize2', (req, res) => {
       'title': "DOORPRIZE Voucher Hotel",
       'rows': jsondata,
     };
-  return res.render('doorprize1', {data: content, numpad :numpad});
+  return res.render('doorprize2', {data: content, numpad :numpad});
   });
 });
 
