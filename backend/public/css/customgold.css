@@ -405,7 +405,7 @@ div.doorprize-cell-details-big{
 div.doorprize-cell-details-small{
   text-align: left;
   vertical-align: middle;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   min-width:610px;
   height:auto;
@@ -422,17 +422,17 @@ div.single-doorprize-cell-details-big{
   font-weight: bolder;
   min-width:230px;
   height:auto;
-  padding: 2px 20px;
+  padding: 10px 20px;
 }
 
 div.single-doorprize-cell-details-small{
   text-align: left;
   vertical-align: middle;
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bold;
   min-width:500px;
   height:auto;
-  padding: 2px 20px;
+  padding: 10px 20px;
 }
 
 
